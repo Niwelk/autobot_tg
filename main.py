@@ -59,7 +59,7 @@ def start(message):
     fourword = 'Начните прямо сейчас!\nПросто выберете нужные параметры и получите список автомобилей, которые идеально подойдут вам. Наш бот сделает процесс поиска простым и быстрым!'
 
     bot.send_message(message.chat.id, f"Привет, <b>{message.from_user.first_name}</b>!", parse_mode='html')
-    bot.send_message(message.chat.id, f"{firtword}\n{secword}\n{threeword}\n{fourword}", parse_mode='html', reply_markup=inline1())
+    bot.send_message(message.chat.id, f"{firtword}\n\n{secword}\n\n{threeword}\n\n{fourword}", parse_mode='html', reply_markup=inline1())
 
 @bot.callback_query_handler(func=lambda call: True)
 def call_query(call):
