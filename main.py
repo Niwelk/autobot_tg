@@ -1,5 +1,6 @@
 import telebot
 from telebot import types
+
 bot = telebot.TeleBot('7401092703:AAEUIl1C1Q7UGDuV6C90OUyNrDuzhfks16I')
 
 def inline1():
@@ -7,7 +8,7 @@ def inline1():
     class1 = types.InlineKeyboardButton("Бюджет", callback_data='Бюджет')
     class2 = types.InlineKeyboardButton("Премиум", callback_data='Премиум')
     class3 = types.InlineKeyboardButton("Люкс", callback_data='Люкс')
-    kbd.add(class1,class2,class3)
+    kbd.add(class1, class2, class3)
     return kbd
 
 def inline1m():
@@ -17,7 +18,7 @@ def inline1m():
     marka3 = types.InlineKeyboardButton("Lada", callback_data='Lada')
     marka4 = types.InlineKeyboardButton("Kia", callback_data='Kia')
     back = types.InlineKeyboardButton("(назад)", callback_data='(назад)')
-    kbd.add(marka1,marka2,marka3,marka4, back)
+    kbd.add(marka1, marka2, marka3, marka4, back)
     return kbd
 
 def inline2m():
@@ -28,7 +29,7 @@ def inline2m():
     marka4 = types.InlineKeyboardButton("Lexus", callback_data='Lexus')
     marka5 = types.InlineKeyboardButton("Jaguar", callback_data='Jaguar')
     back = types.InlineKeyboardButton("(назад)", callback_data='(назад)')
-    kbd.add(marka1,marka2,marka3,marka4, marka5, back)
+    kbd.add(marka1, marka2, marka3, marka4, marka5, back)
     return kbd
 
 def inline3m():
@@ -38,14 +39,24 @@ def inline3m():
     marka3 = types.InlineKeyboardButton("Bugatti", callback_data='Bugatti')
     marka4 = types.InlineKeyboardButton("Paganini", callback_data='Paganini')
     back = types.InlineKeyboardButton("(назад)", callback_data='(назад)')
-    kbd.add(marka1,marka2,marka3,marka4, back)
+    kbd.add(marka1, marka2, marka3, marka4, back)
     return kbd
 
+
+#Для кнопки (назад)
 @bot.callback_query_handler(func=lambda call: True)
 def callback_query(call):
-    if call.data == 'Бюджет' or call.data == 'Премиум' or call.data == 'Люкс':
-        bot.send_message(call.message.chat.id, "Вы выбрали " + call.data, reply_markup=inline1m())
+    if call.data == 'Бюджет':
+        bot.send_message(call.message.chat.id, "Вы выбрали Бюджет.", reply_markup=inline1m())
+    elif call.data == 'Премиум':
+        bot.send_message(call.message.chat.id, "Вы выбрали Премиум.", reply_markup=inline2m())
+    elif call.data == 'Люкс':
+        bot.send_message(call.message.chat.id, "Вы выбрали Люкс.", reply_markup=inline3m())
     elif call.data in ['Dacia', 'Datsun', 'Lada', 'Kia']:
+        bot.send_message(call.message.chat.id, "Вы выбрали марку " + call.data)
+    elif call.data in ['Rolls-Royce', 'Bentley', 'Bugatti', 'Paganini']:
+        bot.send_message(call.message.chat.id, "Вы выбрали марку " + call.data)
+    elif call.data in ['Volkswagen', 'BMW', 'Cadillac', 'Lexus', 'Jaguar']:
         bot.send_message(call.message.chat.id, "Вы выбрали марку " + call.data)
     elif call.data == '(назад)':
         bot.send_message(call.message.chat.id, "Вы вернулись назад в меню выбора.", reply_markup=inline1())
