@@ -9,14 +9,17 @@ def inline1():
     class3 = types.InlineKeyboardButton("Люкс", callback_data='Люкс')
     kbd.add(class1,class2,class3)
     return kbd
+
 def inline1m():
     kbd = types.InlineKeyboardMarkup(row_width=1)
     marka1 = types.InlineKeyboardButton("Dacia", callback_data='Dacia')
     marka2 = types.InlineKeyboardButton("Datsun", callback_data='Datsun')
     marka3 = types.InlineKeyboardButton("Lada", callback_data='Lada')
     marka4 = types.InlineKeyboardButton("Kia", callback_data='Kia')
-    kbd.add(marka1,marka2,marka3,marka4)
+    back = types.InlineKeyboardButton("(назад)", callback_data='(назад)')
+    kbd.add(marka1,marka2,marka3,marka4, back)
     return kbd
+
 def inline2m():
     kbd = types.InlineKeyboardMarkup(row_width=1)
     marka1 = types.InlineKeyboardButton("Volkswagen", callback_data='Volkswagen')
@@ -24,16 +27,28 @@ def inline2m():
     marka3 = types.InlineKeyboardButton("Cadillac", callback_data='Cadillac')
     marka4 = types.InlineKeyboardButton("Lexus", callback_data='Lexus')
     marka5 = types.InlineKeyboardButton("Jaguar", callback_data='Jaguar')
-    kbd.add(marka1,marka2,marka3,marka4, marka5)
+    back = types.InlineKeyboardButton("(назад)", callback_data='(назад)')
+    kbd.add(marka1,marka2,marka3,marka4, marka5, back)
     return kbd
+
 def inline3m():
     kbd = types.InlineKeyboardMarkup(row_width=1)
     marka1 = types.InlineKeyboardButton("Rolls-Royce", callback_data='Rolls-Royce')
     marka2 = types.InlineKeyboardButton("Bentley", callback_data='Bentley')
     marka3 = types.InlineKeyboardButton("Bugatti", callback_data='Bugatti')
     marka4 = types.InlineKeyboardButton("Paganini", callback_data='Paganini')
-    kbd.add(marka1,marka2,marka3,marka4)
+    back = types.InlineKeyboardButton("(назад)", callback_data='(назад)')
+    kbd.add(marka1,marka2,marka3,marka4, back)
     return kbd
+
+@bot.callback_query_handler(func=lambda call: True)
+def callback_query(call):
+    if call.data == 'Бюджет' or call.data == 'Премиум' or call.data == 'Люкс':
+        bot.send_message(call.message.chat.id, "Вы выбрали " + call.data, reply_markup=inline1m())
+    elif call.data in ['Dacia', 'Datsun', 'Lada', 'Kia']:
+        bot.send_message(call.message.chat.id, "Вы выбрали марку " + call.data)
+    elif call.data == '(назад)':
+        bot.send_message(call.message.chat.id, "Вы вернулись назад в меню выбора.", reply_markup=inline1())
 
 # ========= СКРИПТ СООБЩЕНИЯ ОТ БОТА =========
 @bot.message_handler(commands=['start'])
