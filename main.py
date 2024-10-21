@@ -1,6 +1,6 @@
 import telebot
 from telebot import types
-bot = telebot.TeleBot("7401092703:AAEUIl1C1Q7UGDuV6C90OUyNrDuzhfks16I")
+bot = telebot.TeleBot('7401092703:AAEUIl1C1Q7UGDuV6C90OUyNrDuzhfks16I')
 
 def inline1():
     kbd = types.InlineKeyboardMarkup(row_width=1)
@@ -35,9 +35,16 @@ def inline3m():
     kbd.add(marka1,marka2,marka3,marka4)
     return kbd
 
+# ========= СКРИПТ СООБЩЕНИЯ ОТ БОТА =========
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.send_message(message.chat.id, f"Привет, <b>{message.from_user.first_name}</b>! Выбери категорию автомобиля",parse_mode='html', reply_markup=inline1())
+    firtword = 'Это телеграмм бот, который поможет вам найти идеальный автомобиль! 🚗'
+    secword = 'Как это работает:\n- Выберете нужные вам параметры: бюджет, марка.\n- Получите персонализированные рекомендации на основе ваших запросов.'
+    threeword = 'Почему именно этот бот?\n- Мгновенная база данных с актуальными предложениями.\n- Удобный и простой интерфейс для быстрого поиска.'
+    fourword = 'Начните прямо сейчас!\nПросто выберете нужные параметры и получите список автомобилей, которые идеально подойдут вам. Наш бот сделает процесс поиска простым и быстрым!'
+
+    bot.send_message(message.chat.id, f"Привет, <b>{message.from_user.first_name}</b>!", parse_mode='html')
+    bot.send_message(message.chat.id, f"{firtword}\n{secword}\n{threeword}\n{fourword}", parse_mode='html', reply_markup=inline1())
 
 @bot.callback_query_handler(func=lambda call: True)
 def call_query(call):
