@@ -1,0 +1,195 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import telebot\r\nfrom telebot import types\r\n\r\nbot = telebot.TeleBot('7401092703:AAEUIl1C1Q7UGDuV6C90OUyNrDuzhfks16I')\r\n\r\ndef inline1():\r\n    kbd = types.InlineKeyboardMarkup(row_width=1)\r\n    class1 = types.InlineKeyboardButton(\"Бюджет\", callback_data='Бюджет')\r\n    class2 = types.InlineKeyboardButton(\"Премиум\", callback_data='Премиум')\r\n    class3 = types.InlineKeyboardButton(\"Люкс\", callback_data='Люкс')\r\n    kbd.add(class1, class2, class3)\r\n    return kbd\r\n\r\ndef inline1m():\r\n    kbd = types.InlineKeyboardMarkup(row_width=1)\r\n    marka1 = types.InlineKeyboardButton(\"Dacia\", callback_data='Dacia')\r\n    marka2 = types.InlineKeyboardButton(\"Datsun\", callback_data='Datsun')\r\n    marka3 = types.InlineKeyboardButton(\"Lada\", callback_data='Lada')\r\n    marka4 = types.InlineKeyboardButton(\"Kia\", callback_data='Kia')\r\n    back = types.InlineKeyboardButton(\"(назад)\", callback_data='(назад)')\r\n    kbd.add(marka1, marka2, marka3, marka4, back)\r\n    return kbd\r\n\r\ndef inline2m():\r\n    kbd = types.InlineKeyboardMarkup(row_width=1)\r\n    marka1 = types.InlineKeyboardButton(\"Volkswagen\", callback_data='Volkswagen')\r\n    marka2 = types.InlineKeyboardButton(\"BMW\", callback_data='BMW')\r\n    marka3 = types.InlineKeyboardButton(\"Cadillac\", callback_data='Cadillac')\r\n    marka4 = types.InlineKeyboardButton(\"Lexus\", callback_data='Lexus')\r\n    marka5 = types.InlineKeyboardButton(\"Jaguar\", callback_data='Jaguar')\r\n    back = types.InlineKeyboardButton(\"(назад)\", callback_data='(назад)')\r\n    kbd.add(marka1, marka2, marka3, marka4, marka5, back)\r\n    return kbd\r\n\r\ndef inline3m():\r\n    kbd = types.InlineKeyboardMarkup(row_width=1)\r\n    marka1 = types.InlineKeyboardButton(\"Rolls-Royce\", callback_data='Rolls-Royce')\r\n    marka2 = types.InlineKeyboardButton(\"Bentley\", callback_data='Bentley')\r\n    marka3 = types.InlineKeyboardButton(\"Bugatti\", callback_data='Bugatti')\r\n    marka4 = types.InlineKeyboardButton(\"Maybach\", callback_data='Maybach')\r\n    back = types.InlineKeyboardButton(\"(назад)\", callback_data='(назад)')\r\n    kbd.add(marka1, marka2, marka3, marka4, back)\r\n    return kbd\r\n\r\n\r\n#Для кнопки (назад)\r\n@bot.callback_query_handler(func=lambda call: True)\r\ndef callback_query(call):\r\n    if call.data == 'Бюджет':\r\n        bot.send_message(call.message.chat.id, \"Вы выбрали Бюджет.\", reply_markup=inline1m())\r\n    elif call.data == 'Премиум':\r\n        bot.send_message(call.message.chat.id, \"Вы выбрали Премиум.\", reply_markup=inline2m())\r\n    elif call.data == 'Люкс':\r\n        bot.send_message(call.message.chat.id, \"Вы выбрали Люкс.\", reply_markup=inline3m())\r\n    elif call.data in ['Dacia', 'Datsun', 'Lada', 'Kia']:\r\n        bot.send_message(call.message.chat.id, \"Вы выбрали марку \" + call.data)\r\n\r\n    elif call.data == 'Bentley':\r\n        name = 'Bentley Bentayga, 2021'\r\n        color = 'Цвет:  Синий'\r\n        cash = '25.000.000 ₽'\r\n        year = 'Год выпуска:  2021'\r\n        probeg = '55.000 км'\r\n        have = 'В НАЛИЧИИ'\r\n        engine = 'Двигатель  4.0 л / 550 л.с. / Бензин'\r\n        kuzov = 'Кузов  Внедорожник 5 дв.'\r\n        privod = 'Привод  Полный'\r\n        sost = 'Состояние не требуется ремонта'\r\n        pts = 'ПТС  Оригинал'\r\n        bot.send_message(call.message.chat.id,f'{name}\\n{color}\\n\\n<b>{cash}\\n</b>\\n{year}\\n{probeg}\\n{have}\\n{engine}\\n{kuzov}\\n{privod}\\n{sost}\\n{pts}\\n\\n\\nhttps://auto.ru/cars/used/sale/bentley/bentayga/1124675566-61e69c1f/', parse_mode='html')\r\n\r\n        name2 = 'Bentley Bentayga, 2024'\r\n        color2 = 'Цвет:  Белый'\r\n        cash2 = '32.900.000 ₽'\r\n        year2 = 'Год выпуска:  2024'\r\n        probeg2 = '100 км'\r\n        have2 = 'В НАЛИЧИИ'\r\n        engine2 = 'Двигатель  4.0 л / 550 л.с. / Бензин'\r\n        kuzov2 = 'Кузов  Внедорожник 5 дв.'\r\n        privod2 = 'Привод  Полный'\r\n        sost2 = 'Состояние не требуется ремонта'\r\n        pts2 = 'ПТС  Оригинал'\r\n        bot.send_message(call.message.chat.id,f'{name2}\\n{color2}\\n\\n<b>{cash2}\\n</b>\\n{year2}\\n{probeg2}\\n{have2}\\n{engine2}\\n{kuzov2}\\n{privod2}\\n{sost2}\\n{pts2}\\n\\n\\nhttps://auto.ru/cars/used/sale/bentley/bentayga/1124564356-8ae5920c/',parse_mode='html')\r\n\r\n        name3 = 'Bentley Bentayga EWB, 2023'\r\n        color3 = 'Цвет:  Сервый'\r\n        cash3 = '49.282.600 ₽'\r\n        year3 = 'Год выпуска:  2023'\r\n        have3 = 'В НАЛИЧИИ'\r\n        engine3 = 'Двигатель  4.0 л / 550 л.с. / Бензин'\r\n        kuzov3 = 'Кузов  Внедорожник 5 дв.'\r\n        privod3 = 'Привод  Полный'\r\n        sost3 = 'Состояние не требуется ремонта'\r\n        pts3 = 'ПТС  Оригинал'\r\n        bot.send_message(call.message.chat.id,f'{name3}\\n{color3}\\n\\n<b>{cash3}\\n</b>\\n{year3}\\n{have3}\\n{engine3}\\n{kuzov3}\\n{privod3}\\n{sost3}\\n{pts3}\\n\\n\\nhttps://auto.ru/cars/new/group/bentley/bentayga/23271554/22544511/1119893898-64c45a7f/',parse_mode='html')\r\n\r\n    elif call.data == 'Bugatti':\r\n        name = 'Bugatti Chiron, 2021'\r\n        color = 'Цвет:  Синий'\r\n        cash = '400.000.000 ₽'\r\n        year = 'Год выпуска:  2021'\r\n        probeg = '1 км'\r\n        have = 'В НАЛИЧИИ'\r\n        engine = 'Двигатель  8.0 л / 1500 л.с. / Бензин'\r\n        kuzov = 'Кузов  Купе'\r\n        privod = 'Привод  Полный'\r\n        sost = 'Состояние не требуется ремонта'\r\n        pts = 'ПТС  Оригинал'\r\n        bot.send_message(call.message.chat.id,f'{name}\\n{color}\\n\\n<b>{cash}\\n</b>\\n{year}\\n{probeg}\\n{have}\\n{engine}\\n{kuzov}\\n{privod}\\n{sost}\\n{pts}\\n\\n\\nhttps://auto.ru/cars/used/sale/bugatti/chiron/1124292308-a01c32ca/',parse_mode='html')\r\n\r\n        name2 = 'Bugatti Chiron, 2021'\r\n        color2 = 'Цвет:  Серебристый'\r\n        cash2 = '410.000.000 ₽'\r\n        year2 = 'Год выпуска:  2021'\r\n        have2 = 'В НАЛИЧИИ'\r\n        engine2 = 'Двигатель  8.0 л / 1500 л.с. / Бензин'\r\n        kuzov2 = 'Кузов  Купе'\r\n        privod2 = 'Привод  Полный'\r\n        sost2 = 'Состояние не требуется ремонта'\r\n        pts2 = 'ПТС  Оригинал'\r\n        bot.send_message(call.message.chat.id,f'{name2}\\n{color2}\\n\\n<b>{cash2}\\n</b>\\n{year2}\\n{have2}\\n{engine2}\\n{kuzov2}\\n{privod2}\\n{sost2}\\n{pts2}\\n\\n\\nhttps://auto.ru/cars/new/group/bugatti/chiron/20765749/21527797/1125055271-517065a1/',parse_mode='html')\r\n\r\n        name3 = 'Bugatti Chiron, 2021'\r\n        color3 = 'Цвет:  Белый'\r\n        cash3 = '420.000.000 ₽'\r\n        year3 = 'Год выпуска:  2021'\r\n        probeg3 = '595 км'\r\n        have3 = 'В НАЛИЧИИ'\r\n        engine3 = 'Двигатель  8.0 л / 1500 л.с. / Бензин'\r\n        kuzov3 = 'Кузов  Купе'\r\n        privod3 = 'Привод  Полный'\r\n        sost3 = 'Состояние не требуется ремонта'\r\n        pts3 = 'ПТС  Оригинал'\r\n        bot.send_message(call.message.chat.id,f'{name3}\\n{color3}\\n\\n<b>{cash3}\\n</b>\\n{year3}\\n{probeg3}\\n{have3}\\n{engine3}\\n{kuzov3}\\n{privod3}\\n{sost3}\\n{pts3}\\n\\n\\nhttps://auto.ru/cars/used/sale/bugatti/chiron/1124215250-eb71b0d8/',parse_mode='html')\r\n\r\n    elif call.data == 'Rolls-Royce':\r\n        name = 'Rolls-Royce Cullinan Series II Black Badge, 2024'\r\n        color = 'Цвет:  Чёрный'\r\n        cash = '64.900.000 ₽'\r\n        year = 'Год выпуска:  2024'\r\n        probeg = '100 км'\r\n        have = 'В НАЛИЧИИ'\r\n        engine = 'Двигатель  6.8 л / 600 л.с. / Бензин'\r\n        kuzov = 'Кузов  Внедорожник 5 дв.'\r\n        privod = 'Привод  Полный'\r\n        sost = 'Состояние не требуется ремонта'\r\n        pts = 'ПТС  Оригинал'\r\n        bot.send_message(call.message.chat.id,f'{name}\\n{color}\\n\\n<b>{cash}\\n</b>\\n{year}\\n{probeg}\\n{have}\\n{engine}\\n{kuzov}\\n{privod}\\n{sost}\\n{pts}\\n\\n\\nhttps://auto.ru/cars/used/sale/rolls_royce/cullinan/1125451931-e193f62b/',parse_mode='html')\r\n\r\n        name2 = 'Rolls-Royce Cullinan Series II Black Badge, 2024'\r\n        color2 = 'Цвет:  Белый'\r\n        cash2 = '62.500.000 ₽'\r\n        year2 = 'Год выпуска:  2024'\r\n        probeg2 = '39 км'\r\n        have2 = 'В НАЛИЧИИ'\r\n        engine2 = 'Двигатель  6.8 л / 600 л.с. / Бензин'\r\n        kuzov2 = 'Кузлов  Внедорожник 5 дв.'\r\n        privod2 = 'Привод  Полный'\r\n        sost2 = 'Состояние не требуется ремонта'\r\n        pts2 = 'ПТС  Оригинал'\r\n        bot.send_message(call.message.chat.id,f'{name2}\\n{color2}\\n\\n<b>{cash2}\\n</b>\\n{year2}\\n{probeg2}\\n{have2}\\n{engine2}\\n{kuzov2}\\n{privod2}\\n{sost2}\\n{pts2}\\n\\n\\nhttps://auto.ru/cars/used/sale/rolls_royce/cullinan/1125451579-4d2cc40a/',parse_mode='html')\r\n\r\n        name3 = 'Rolls-Royce Spectre, 2023'\r\n        color3 = 'Цвет:  Чёрный'\r\n        cash3 = '84.933.800 ₽'\r\n        year3 = 'Год выпуска:  2023'\r\n        probeg3 = '530 км'\r\n        have3 = 'В НАЛИЧИИ'\r\n        engine3 = 'Двигатель  585 л.с. / 430 кВт / электро'\r\n        kuzov3 = 'Кузов  Внедорожник 5 дв.'\r\n        privod3 = 'Привод  Полный'\r\n        sost3 = 'Состояние не требуется ремонта'\r\n        pts3 = 'ПТС  Оригинал'\r\n        bot.send_message(call.message.chat.id,f'{name3}\\n{color3}\\n\\n<b>{cash3}\\n</b>\\n{year3}\\n{probeg3}\\n{have3}\\n{engine3}\\n{kuzov3}\\n{privod3}\\n{sost3}\\n{pts3}\\n\\n\\nhttps://auto.ru/cars/new/group/rolls_royce/spectre/23403556/23804614/1124296284-edff7aed/',parse_mode='html')\r\n\r\n    elif call.data == 'Maybach':\r\n        name = 'Mercedes-Benz Maybach S-класс 4.0 AT, 2022'\r\n        color = 'Цвет:  Чёрный'\r\n        cash = '28.750.000 ₽'\r\n        year = 'Год выпуска:  2022'\r\n        probeg = '4.900 км'\r\n        have = 'В НАЛИЧИИ'\r\n        engine = 'Объём двигатель  4 л / Бензин'\r\n        kuzov = 'Кузов  Седан'\r\n        privod = 'Привод  Полный'\r\n        sost = 'Состояние не требуется ремонта'\r\n        pts = 'ПТС  Оригинал'\r\n        bot.send_message(call.message.chat.id,f'{name}\\n{color}\\n\\n<b>{cash}\\n</b>\\n{year}\\n{probeg}\\n{have}\\n{engine}\\n{kuzov}\\n{privod}\\n{sost}\\n{pts}\\n\\n\\nhttps://www.avito.ru/moskva/avtomobili/mercedes-benz_maybach_s-klass_4.0_at_2022_4_900_km_4801548844',parse_mode='html')\r\n\r\n        name2 = 'Mercedes-Benz Maybach S-класс 4.0 AT, 2024'\r\n        color2 = 'Цвет:  Чёрный'\r\n        cash2 = '36.700.000 ₽'\r\n        year2 = 'Год выпуска:  2024'\r\n        have2 = 'В НАЛИЧИИ'\r\n        engine2 = 'Объём двигатель  4 л / Бензин'\r\n        kuzov2 = 'Кузов  Седан'\r\n        privod2 = 'Привод  Полный'\r\n        sost2 = 'Состояние не требуется ремонта'\r\n        pts2 = 'ПТС  Оригинал'\r\n        bot.send_message(call.message.chat.id,f'{name2}\\n{color2}\\n\\n<b>{cash2}\\n</b>\\n{year2}\\n{have2}\\n{engine2}\\n{kuzov2}\\n{privod2}\\n{sost2}\\n{pts2}\\n\\n\\nhttps://www.avito.ru/moskva/avtomobili/mercedes-benz_maybach_s-klass_4.0_at_2024_4271695103',parse_mode='html')\r\n\r\n        name3 = 'Mercedes-Benz Maybach S-класс 4.0 AT, 2021'\r\n        color3 = 'Цвет:  Чёрный'\r\n        cash3 = '19.500.000 ₽'\r\n        year3 = 'Год выпуска:  2021'\r\n        probeg3 = '63.500 км'\r\n        have3 = 'В НАЛИЧИИ'\r\n        engine3 = 'Объём двигатель  4 л / Бензин'\r\n        kuzov3 = 'Кузов  Седан'\r\n        privod3 = 'Привод  Электронный'\r\n        sost3 = 'Состояние не требуется ремонта'\r\n        pts3 = 'ПТС  Оригинал'\r\n        bot.send_message(call.message.chat.id,f'{name3}\\n{color3}\\n\\n<b>{cash3}\\n</b>\\n{year3}\\n{probeg3}\\n{have3}\\n{engine3}\\n{kuzov3}\\n{privod3}\\n{sost3}\\n{pts3}\\n\\n\\nhttps://www.avito.ru/moskva/avtomobili/mercedes-benz_maybach_s-klass_4.0_at_2021_63_500_km_4556343769',parse_mode='html')\r\n\r\n    # ===========\r\n    elif call.data in ['Volkswagen', 'BMW', 'Cadillac', 'Lexus', 'Jaguar']:\r\n        bot.send_message(call.message.chat.id, \"Вы выбрали марку \" + call.data)\r\n    elif call.data == '(назад)':\r\n        bot.send_message(call.message.chat.id, \"Вы вернулись назад в меню выбора.\", reply_markup=inline1())\r\n\r\n# ========= СКРИПТ СООБЩЕНИЯ ОТ БОТА =========\r\n@bot.message_handler(commands=['start'])\r\ndef start(message):\r\n    firtword = 'Это телеграмм бот, который поможет вам найти идеальный автомобиль! \uD83D\uDE97'\r\n    secword = 'Как это работает:\\n- Выберете нужные вам параметры: бюджет, марка.\\n- Получите персонализированные рекомендации на основе ваших запросов.'\r\n    threeword = 'Почему именно этот бот?\\n- Мгновенная база данных с актуальными предложениями.\\n- Удобный и простой интерфейс для быстрого поиска.'\r\n    fourword = 'Начните прямо сейчас!\\nПросто выберете нужные параметры и получите список автомобилей, которые идеально подойдут вам. Наш бот сделает процесс поиска простым и быстрым!'\r\n\r\n    bot.send_message(message.chat.id, f\"Привет, <b>{message.from_user.first_name}</b>!\", parse_mode='html')\r\n    bot.send_message(message.chat.id, f\"{firtword}\\n\\n{secword}\\n\\n{threeword}\\n\\n{fourword}\", parse_mode='html', reply_markup=inline1())\r\n\r\n@bot.callback_query_handler(func=lambda call: True)\r\ndef call_query(call):\r\n    if call.message:\r\n        if call.data == 'Бюджет':\r\n            bot.send_message(call.message.chat.id, \"Выберите марку автомобиля\", reply_markup=inline1m())\r\n        if call.data == 'Премиум':\r\n            bot.send_message(call.message.chat.id, \"Выберите марку автомобиля\", reply_markup=inline2m())\r\n        if call.data == 'Люкс':\r\n            bot.send_message(call.message.chat.id, 'Выберите марку автомобиля',reply_markup=inline3m())\r\n\r\n        bot.answer_callback_query(callback_query_id=call.id, show_alert=False)\r\n\r\n    bot.delete_message(call.message.chat.id, call.message.message_id) #удаление предыдущего сообщения\r\n\r\nbot.polling(none_stop=True)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision cf213414d7306dc18e6afefc78e870e195636ba7)
++++ b/main.py	(date 1729699631985)
+@@ -1,7 +1,7 @@
+ import telebot
+ from telebot import types
+ 
+-bot = telebot.TeleBot('7401092703:AAEUIl1C1Q7UGDuV6C90OUyNrDuzhfks16I')
++bot = telebot.TeleBot('7700831697:AAGStSYZGOPbm3_irTzcw1PZJXGcoiXH9q8')
+ 
+ def inline1():
+     kbd = types.InlineKeyboardMarkup(row_width=1)
+@@ -41,6 +41,27 @@
+     back = types.InlineKeyboardButton("(назад)", callback_data='(назад)')
+     kbd.add(marka1, marka2, marka3, marka4, back)
+     return kbd
++def inline4m():
++    kbd = types.InlineKeyboardMarkup(row_width=1)
++    marka1 = types.InlineKeyboardButton("Bentley Bentayga, 2021", callback_data='B2021')
++    marka2 = types.InlineKeyboardButton("Bentley Bentayga, 2024", callback_data='B2024')
++    marka3 = types.InlineKeyboardButton("Bentley Bentayga EWB, 2023", callback_data='B2023')
++    kbd.add(marka1, marka2, marka3)
++    return kbd
++def inline5m():
++    kbd = types.InlineKeyboardMarkup(row_width=1)
++    marka1 = types.InlineKeyboardButton("Bugatti Chiron, 2021 синий", callback_data='BB')
++    marka2 = types.InlineKeyboardButton("Bugatti Chiron, 2021 серебристый", callback_data='BS')
++    marka3 = types.InlineKeyboardButton("Bugatti Chiron, 2021 белый", callback_data='BW')
++    kbd.add(marka1, marka2, marka3)
++    return kbd
++def inline6m():
++    kbd = types.InlineKeyboardMarkup(row_width=1)
++    marka1 = types.InlineKeyboardButton("Bentley Bentayga, 2021", callback_data='B2021')
++    marka2 = types.InlineKeyboardButton("Bentley Bentayga, 2024", callback_data='B2024')
++    marka3 = types.InlineKeyboardButton("Bentley Bentayga EWB, 2023", callback_data='B2023')
++    kbd.add(marka1, marka2, marka3)
++    return kbd
+ 
+ 
+ #Для кнопки (назад)
+@@ -54,8 +75,10 @@
+         bot.send_message(call.message.chat.id, "Вы выбрали Люкс.", reply_markup=inline3m())
+     elif call.data in ['Dacia', 'Datsun', 'Lada', 'Kia']:
+         bot.send_message(call.message.chat.id, "Вы выбрали марку " + call.data)
+-
++#=======МОДЕЛИ ДЛЯ BENTLEY===========
+     elif call.data == 'Bentley':
++        bot.send_message(call.message.chat.id, "Выберите модель", reply_markup=inline4m())
++    elif call.data == 'B2021':
+         name = 'Bentley Bentayga, 2021'
+         color = 'Цвет:  Синий'
+         cash = '25.000.000 ₽'
+@@ -69,6 +92,7 @@
+         pts = 'ПТС  Оригинал'
+         bot.send_message(call.message.chat.id,f'{name}\n{color}\n\n<b>{cash}\n</b>\n{year}\n{probeg}\n{have}\n{engine}\n{kuzov}\n{privod}\n{sost}\n{pts}\n\n\nhttps://auto.ru/cars/used/sale/bentley/bentayga/1124675566-61e69c1f/', parse_mode='html')
+ 
++    elif call.data == 'B2024':
+         name2 = 'Bentley Bentayga, 2024'
+         color2 = 'Цвет:  Белый'
+         cash2 = '32.900.000 ₽'
+@@ -82,6 +106,7 @@
+         pts2 = 'ПТС  Оригинал'
+         bot.send_message(call.message.chat.id,f'{name2}\n{color2}\n\n<b>{cash2}\n</b>\n{year2}\n{probeg2}\n{have2}\n{engine2}\n{kuzov2}\n{privod2}\n{sost2}\n{pts2}\n\n\nhttps://auto.ru/cars/used/sale/bentley/bentayga/1124564356-8ae5920c/',parse_mode='html')
+ 
++    elif call.data == 'B2023':
+         name3 = 'Bentley Bentayga EWB, 2023'
+         color3 = 'Цвет:  Сервый'
+         cash3 = '49.282.600 ₽'
+@@ -93,8 +118,10 @@
+         sost3 = 'Состояние не требуется ремонта'
+         pts3 = 'ПТС  Оригинал'
+         bot.send_message(call.message.chat.id,f'{name3}\n{color3}\n\n<b>{cash3}\n</b>\n{year3}\n{have3}\n{engine3}\n{kuzov3}\n{privod3}\n{sost3}\n{pts3}\n\n\nhttps://auto.ru/cars/new/group/bentley/bentayga/23271554/22544511/1119893898-64c45a7f/',parse_mode='html')
+-
++# =======МОДЕЛИ ДЛЯ BUGATTI===========
+     elif call.data == 'Bugatti':
++        bot.send_message(call.message.chat.id, "Выберите модель", reply_markup=inline5m())
++    elif call.data == 'BB':
+         name = 'Bugatti Chiron, 2021'
+         color = 'Цвет:  Синий'
+         cash = '400.000.000 ₽'
+@@ -107,7 +134,7 @@
+         sost = 'Состояние не требуется ремонта'
+         pts = 'ПТС  Оригинал'
+         bot.send_message(call.message.chat.id,f'{name}\n{color}\n\n<b>{cash}\n</b>\n{year}\n{probeg}\n{have}\n{engine}\n{kuzov}\n{privod}\n{sost}\n{pts}\n\n\nhttps://auto.ru/cars/used/sale/bugatti/chiron/1124292308-a01c32ca/',parse_mode='html')
+-
++    elif call.data == 'BS':
+         name2 = 'Bugatti Chiron, 2021'
+         color2 = 'Цвет:  Серебристый'
+         cash2 = '410.000.000 ₽'
+@@ -119,7 +146,7 @@
+         sost2 = 'Состояние не требуется ремонта'
+         pts2 = 'ПТС  Оригинал'
+         bot.send_message(call.message.chat.id,f'{name2}\n{color2}\n\n<b>{cash2}\n</b>\n{year2}\n{have2}\n{engine2}\n{kuzov2}\n{privod2}\n{sost2}\n{pts2}\n\n\nhttps://auto.ru/cars/new/group/bugatti/chiron/20765749/21527797/1125055271-517065a1/',parse_mode='html')
+-
++    elif call.data == 'BW':
+         name3 = 'Bugatti Chiron, 2021'
+         color3 = 'Цвет:  Белый'
+         cash3 = '420.000.000 ₽'
+@@ -132,7 +159,7 @@
+         sost3 = 'Состояние не требуется ремонта'
+         pts3 = 'ПТС  Оригинал'
+         bot.send_message(call.message.chat.id,f'{name3}\n{color3}\n\n<b>{cash3}\n</b>\n{year3}\n{probeg3}\n{have3}\n{engine3}\n{kuzov3}\n{privod3}\n{sost3}\n{pts3}\n\n\nhttps://auto.ru/cars/used/sale/bugatti/chiron/1124215250-eb71b0d8/',parse_mode='html')
+-
++# =======МОДЕЛИ ДЛЯ ROLLS-ROYCE===========
+     elif call.data == 'Rolls-Royce':
+         name = 'Rolls-Royce Cullinan Series II Black Badge, 2024'
+         color = 'Цвет:  Чёрный'
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"4e5d6f1e-c826-40a2-aa8a-c589c3d62bd3\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/main.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/main.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 0\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2nerFUyQZ6OZkAcWIif2H0i0GcN\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Python.main.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/botTelegram/autobot_tg&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Admin\\Desktop\\botTelegram\\autobot_tg\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"main\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"pythonProject\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/main.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"4e5d6f1e-c826-40a2-aa8a-c589c3d62bd3\" name=\"Changes\" comment=\"\" />\r\n      <created>1729344278912</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1729344278912</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision cf213414d7306dc18e6afefc78e870e195636ba7)
++++ b/.idea/workspace.xml	(date 1729698631048)
+@@ -5,6 +5,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="4e5d6f1e-c826-40a2-aa8a-c589c3d62bd3" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/pythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+     </list>
+@@ -32,14 +35,15 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/botTelegram/autobot_tg&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Python.main.executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "main",
++    "last_opened_file_path": "C:/Users/Admin/Desktop/botTelegram/autobot_tg",
++    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\Admin\Desktop\botTelegram\autobot_tg" />
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Black\">\r\n    <option name=\"sdkName\" value=\"Python 3.12 (pythonProject)\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.13\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision cf213414d7306dc18e6afefc78e870e195636ba7)
++++ b/.idea/misc.xml	(date 1729695105646)
+@@ -3,5 +3,5 @@
+   <component name="Black">
+     <option name="sdkName" value="Python 3.12 (pythonProject)" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (pythonProject)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/pythonProject.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <excludeFolder url=\"file://$MODULE_DIR$/.venv\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/pythonProject.iml b/.idea/pythonProject.iml
+--- a/.idea/pythonProject.iml	(revision cf213414d7306dc18e6afefc78e870e195636ba7)
++++ b/.idea/pythonProject.iml	(date 1729695105639)
+@@ -4,7 +4,7 @@
+     <content url="file://$MODULE_DIR$">
+       <excludeFolder url="file://$MODULE_DIR$/.venv" />
+     </content>
+-    <orderEntry type="inheritedJdk" />
++    <orderEntry type="jdk" jdkName="Python 3.12 (pythonProject)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
