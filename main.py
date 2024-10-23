@@ -75,6 +75,47 @@ def inline7m():
     back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
     kbd.add(marka1, marka2, marka3, back)
     return kbd
+def inline8m():
+    kbd = types.InlineKeyboardMarkup(row_width=1)
+    marka1 = types.InlineKeyboardButton("Volkswagen ID.6 X, 2023", callback_data='Volks')
+    marka2 = types.InlineKeyboardButton("Volkswagen Tiguan L Pro, 2024", callback_data='Volks2')
+    marka3 = types.InlineKeyboardButton("Volkswagen Tayron, 2023", callback_data='Volks3')
+    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    kbd.add(marka1, marka2, marka3, back)
+    return kbd
+def inline9m():
+    kbd = types.InlineKeyboardMarkup(row_width=1)
+    marka1 = types.InlineKeyboardButton("BMW Z4 20i, 2019", callback_data='BMW1')
+    marka2 = types.InlineKeyboardButton("BMW X2 xDrive25i, 2024", callback_data='BMW2')
+    marka3 = types.InlineKeyboardButton("BMW X3 M Competition, 2021", callback_data='BMW3')
+    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    kbd.add(marka1, marka2, marka3, back)
+    return kbd
+def inline10m():
+    kbd = types.InlineKeyboardMarkup(row_width=1)
+    marka1 = types.InlineKeyboardButton("Audi e-tron 55, 2021", callback_data='Audi1')
+    marka2 = types.InlineKeyboardButton("Audi A6 45 TDI, 2020", callback_data='Audi2')
+    marka3 = types.InlineKeyboardButton("Audi A6 40 TDI, 2019", callback_data='Audi3')
+    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    kbd.add(marka1, marka2, marka3, back)
+    return kbd
+def inline11m():
+    kbd = types.InlineKeyboardMarkup(row_width=1)
+    marka1 = types.InlineKeyboardButton("Mazda CX-5, 2024", callback_data='Mazda1')
+    marka2 = types.InlineKeyboardButton("Mazda 6 Atenza, 2023", callback_data='Mazda2')
+    marka3 = types.InlineKeyboardButton("Mazda 6, 2019", callback_data='Mazda3')
+    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    kbd.add(marka1, marka2, marka3, back)
+    return kbd
+def inline12m():
+    kbd = types.InlineKeyboardMarkup(row_width=1)
+    marka1 = types.InlineKeyboardButton("Lexus LX 450d, 2016", callback_data='Lexus1')
+    marka2 = types.InlineKeyboardButton("Lexus RX 350, 2024", callback_data='Lexus2')
+    marka3 = types.InlineKeyboardButton("Lexus RX 500h, 2023", callback_data='Lexus3')
+    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    kbd.add(marka1, marka2, marka3, back)
+    return kbd
+
 
 
 @bot.callback_query_handler(func=lambda call: True)
@@ -258,8 +299,10 @@ def callback_query(call):
         pts3 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name3}\n{color3}\n\n<b>{cash3}\n</b>\n{year3}\n{probeg3}\n{have3}\n{engine3}\n{kuzov3}\n{privod3}\n{sost3}\n{pts3}\n\n\nhttps://www.avito.ru/moskva/avtomobili/mercedes-benz_maybach_s-klass_4.0_at_2021_63_500_km_4556343769',parse_mode='html')
 
-    # ===========
+    # ======VOLKSWAGEN MODELS====
     elif call.data == 'Volkswagen':
+        bot.send_message(call.message.chat.id, "Выберите модель", reply_markup=inline8m())
+    elif call.data == 'Volks':
         name = 'Volkswagen ID.6 X, 2023'
         color = 'Цвет: Белый'
         cash = '5.400.000 ₽'
@@ -272,7 +315,7 @@ def callback_query(call):
         sost = 'Состояние: Не требуется ремонт'
         pts = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name}\n{color}\n\n<b>{cash}\n</b>\n{year}\n{probeg}\n{have}\n{engine}\n{kuzov}\n{privod}\n{sost}\n{pts}\n\n\nhttps://auto.ru/cars/new/group/volkswagen/id6/23178742/23661178/1123238228-550cb29d/', parse_mode='html')
-
+    elif call.data == 'Volks2':
         name2 = 'Volkswagen Tiguan L Pro, 2024'
         color2 = 'Цвет: Белый'
         cash2 = '6.700.000 ₽'
@@ -285,7 +328,7 @@ def callback_query(call):
         sost2 = 'Состояние: Не требуется ремонт'
         pts2 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name2}\n{color2}\n\n<b>{cash2}\n</b>\n{year2}\n{probeg2}\n{have2}\n{engine2}\n{kuzov2}\n{privod2}\n{sost2}\n{pts2}\n\n\nhttps://auto.ru/cars/new/group/volkswagen/tiguan/23983358/23983446/1125378713-335070db/',parse_mode='html')
-
+    elif call.data == 'Volks3':
         name3 = 'Volkswagen Tayron, 2023'
         color3 = 'Цвет: Черный'
         cash3 = '5.463.000 ₽'
@@ -299,8 +342,10 @@ def callback_query(call):
         pts3 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name3}\n{color3}\n\n<b>{cash3}\n</b>\n{year3}\n{probeg3}\n{have3}\n{engine3}\n{kuzov3}\n{privod3}\n{sost3}\n{pts3}\n\n\nhttps://auto.ru/cars/new/group/volkswagen/tayron/23415753/23695272/1123060914-d9bbcbdf/',parse_mode='html')
 
-
+    # ==========BMW MODELS====
     elif call.data == 'BMW':
+        bot.send_message(call.message.chat.id, "Выберите модель", reply_markup=inline9m())
+    elif call.data == 'BMW1':
         name = 'BMW Z4 20i, 2019'
         color = 'Цвет: Черный'
         cash = '4.500.000 ₽'
@@ -313,7 +358,7 @@ def callback_query(call):
         sost = 'Состояние: Не требуется ремонт'
         pts = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name}\n{color}\n\n<b>{cash}\n</b>\n{year}\n{probeg}\n{have}\n{engine}\n{kuzov}\n{privod}\n{sost}\n{pts}\n\n\nhttps://auto.ru/cars/used/sale/bmw/z4/1124788244-11fc1245/', parse_mode='html')
-
+    elif call.data == 'BMW2':
         name2 = 'BMW X2 xDrive25i, 2024'
         color2 = 'Цвет: Синий'
         cash2 = '7.699.900 ₽'
@@ -326,7 +371,7 @@ def callback_query(call):
         sost2 = 'Состояние: Не требуется ремонт'
         pts2 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name2}\n{color2}\n\n<b>{cash2}\n</b>\n{year2}\n{probeg2}\n{have2}\n{engine2}\n{kuzov2}\n{privod2}\n{sost2}\n{pts2}\n\n\nhttps://auto.ru/cars/used/sale/bmw/x2/1125228996-c5bf0da5/',parse_mode='html')
-
+    elif call.data == 'BMW3':
         name3 = 'BMW X3 M Competition, 2021'
         color3 = 'Цвет: Белый'
         cash3 = '9.025.000 ₽'
@@ -341,8 +386,10 @@ def callback_query(call):
         bot.send_message(call.message.chat.id,f'{name3}\n{color3}\n\n<b>{cash3}\n</b>\n{year3}\n{probeg3}\n{have3}\n{engine3}\n{kuzov3}\n{privod3}\n{sost3}\n{pts3}\n\n\nhttps://auto.ru/cars/used/sale/bmw/x3_m/1124212561-da041176/',parse_mode='html')
 
 
-
+        # ========= AUDI MODELS ======
     elif call.data == 'Audi':
+        bot.send_message(call.message.chat.id, "Выберите модель", reply_markup=inline10m())
+    elif call.data == 'Audi1':
         name = 'Audi e-tron 55, 2021'
         color = 'Цвет: Синий'
         cash = '6.983.000 ₽'
@@ -355,7 +402,7 @@ def callback_query(call):
         sost = 'Состояние: Не требуется ремонт'
         pts = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name}\n{color}\n\n<b>{cash}\n</b>\n{year}\n{probeg}\n{have}\n{engine}\n{kuzov}\n{privod}\n{sost}\n{pts}\n\n\nhttps://auto.ru/cars/used/sale/audi/e_tron/1122479469-0db7f670/', parse_mode='html')
-
+    elif call.data == 'Audi2':
         name2 = 'Audi A6 45 TDI, 2020'
         color2 = 'Цвет: Белый'
         cash2 = '5.990.000 ₽'
@@ -368,7 +415,7 @@ def callback_query(call):
         sost2 = 'Состояние: Не требуется ремонт'
         pts2 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name2}\n{color2}\n\n<b>{cash2}\n</b>\n{year2}\n{probeg2}\n{have2}\n{engine2}\n{kuzov2}\n{privod2}\n{sost2}\n{pts2}\n\n\nhttps://auto.ru/cars/used/sale/audi/a6/1125146951-d73233ed/',parse_mode='html')
-
+    elif call.data == 'Audi3':
         name3 = 'Audi A6 40 TDI, 2019'
         color3 = 'Цвет: Черный'
         cash3 = '3.354.000 ₽'
@@ -382,8 +429,10 @@ def callback_query(call):
         pts3 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name3}\n{color3}\n\n<b>{cash3}\n</b>\n{year3}\n{probeg3}\n{have3}\n{engine3}\n{kuzov3}\n{privod3}\n{sost3}\n{pts3}\n\n\nhttps://auto.ru/cars/used/sale/audi/a6/1124929459-bddf7818/',parse_mode='html')
 
-
+#      ==========MAZDA MODELS========
     elif call.data == 'Mazda':
+        bot.send_message(call.message.chat.id, "Выберите модель", reply_markup=inline11m())
+    elif call.data == 'Mazda1':
         name = 'Mazda CX-5, 2024'
         color = 'Цвет: Серый'
         cash = '6.800.000 ₽'
@@ -396,7 +445,7 @@ def callback_query(call):
         sost = 'Состояние: Не требуется ремонт'
         pts = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name}\n{color}\n\n<b>{cash}\n</b>\n{year}\n{probeg}\n{have}\n{engine}\n{kuzov}\n{privod}\n{sost}\n{pts}\n\n\nhttps://auto.ru/cars/new/group/mazda/cx_5/23556288/23556612/1125405813-6214e05e/', parse_mode='html')
-
+    elif call.data == 'Mazda2':
         name2 = 'Mazda 6 Atenza, 2023'
         color2 = 'Цвет: Голубой'
         cash2 = '4.290.000 ₽'
@@ -409,7 +458,7 @@ def callback_query(call):
         sost2 = 'Состояние: Не требуется ремонт'
         pts2 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name2}\n{color2}\n\n<b>{cash2}\n</b>\n{year2}\n{probeg2}\n{have2}\n{engine2}\n{kuzov2}\n{privod2}\n{sost2}\n{pts2}\n\n\nhttps://auto.ru/cars/new/group/mazda/6/21419824/23395036/1122993433-05959dbc/',parse_mode='html')
-
+    elif call.data == 'Mazda3':
         name3 = 'Mazda 6, 2019'
         color3 = 'Цвет: Белый'
         cash3 = '3.500.000 ₽'
@@ -423,8 +472,10 @@ def callback_query(call):
         pts3 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name3}\n{color3}\n\n<b>{cash3}\n</b>\n{year3}\n{probeg3}\n{have3}\n{engine3}\n{kuzov3}\n{privod3}\n{sost3}\n{pts3}\n\n\nhttps://auto.ru/cars/used/sale/mazda/6/1125490746-b583f752/',parse_mode='html')
 
-
+# =========LEXUS MODELS===========
     elif call.data == 'Lexus':
+        bot.send_message(call.message.chat.id, "Выберите модель", reply_markup=inline12m())
+    elif call.data == 'Lexus1':
         name = 'Lexus LX 450d, 2016'
         color = 'Цвет: Белый'
         cash = '6.599.999 ₽'
@@ -437,7 +488,7 @@ def callback_query(call):
         sost = 'Состояние: Не требуется ремонт'
         pts = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name}\n{color}\n\n<b>{cash}\n</b>\n{year}\n{probeg}\n{have}\n{engine}\n{kuzov}\n{privod}\n{sost}\n{pts}\n\n\nhttps://auto.ru/cars/used/sale/lexus/lx/1124531784-17348801/', parse_mode='html')
-
+    elif call.data == 'Lexus2':
         name2 = 'Lexus RX 350, 2024'
         color2 = 'Цвет: Черный'
         cash2 = '11.950.000 ₽'
@@ -450,7 +501,7 @@ def callback_query(call):
         sost2 = 'Состояние: Не требуется ремонт'
         pts2 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name2}\n{color2}\n\n<b>{cash2}\n</b>\n{year2}\n{probeg2}\n{have2}\n{engine2}\n{kuzov2}\n{privod2}\n{sost2}\n{pts2}\n\n\nhttps://auto.ru/cars/used/sale/lexus/rx/1125413651-c6128d71/',parse_mode='html')
-
+    elif call.data == 'Lexus3':
         name3 = 'Lexus RX 500h, 2023'
         color3 = 'Цвет: Черный'
         cash3 = '12.790.000 ₽'
@@ -464,9 +515,12 @@ def callback_query(call):
         pts3 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name3}\n{color3}\n\n<b>{cash3}\n</b>\n{year3}\n{probeg3}\n{have3}\n{engine3}\n{kuzov3}\n{privod3}\n{sost3}\n{pts3}\n\n\nhttps://auto.ru/cars/used/sale/lexus/rx/1124171035-ad6a48a7/',parse_mode='html')
 
-    # ===========
+    # ======LADA MODELS=====
+
 
     elif call.data == 'Lada':
+        bot.send_message(call.message.chat.id, "Выберите модель", reply_markup=inline13m())
+    elif call.data == 'Lada1':
         name = 'Lada (ВАЗ) Vesta SW Cross, 2024'
         color = 'Цвет: Белый'
         cash = '2.010.900 ₽'
@@ -479,7 +533,7 @@ def callback_query(call):
         sost = 'Состояние: Не требуется ремонт'
         pts = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name}\n{color}\n\n<b>{cash}\n</b>\n{year}\n{probeg}\n{have}\n{engine}\n{kuzov}\n{privod}\n{sost}\n{pts}\n\n\nhttps://auto.ru/cars/new/group/vaz/vesta/23900577/24014270/1125344513-a7f021f2/', parse_mode='html')
-
+    elif call.data == 'Lada2':
         name2 = 'Lada (ВАЗ) Granta, 2024'
         color2 = 'Цвет: Серебристый'
         cash2 = '1.067.000 ₽'
@@ -492,7 +546,7 @@ def callback_query(call):
         sost2 = 'Состояние: Не требуется ремонт'
         pts2 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name2}\n{color2}\n\n<b>{cash2}\n</b>\n{year2}\n{probeg2}\n{have2}\n{engine2}\n{kuzov2}\n{privod2}\n{sost2}\n{pts2}\n\n\nhttps://auto.ru/cars/new/group/vaz/granta/21377540/23924470/1125344512-eebda176/',parse_mode='html')
-
+    elif call.data == 'Lada3':
         name3 = 'Lada (ВАЗ) Niva, 2024'
         color3 = 'Цвет: Черный'
         cash3 = '1.403.900 ₽'
@@ -506,8 +560,10 @@ def callback_query(call):
         pts3 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name3}\n{color3}\n\n<b>{cash3}\n</b>\n{year3}\n{probeg3}\n{have3}\n{engine3}\n{kuzov3}\n{privod3}\n{sost3}\n{pts3}\n\n\nhttps://auto.ru/cars/new/group/vaz/niva/22716614/23805296/1118054807-76f016a1/',parse_mode='html')
 
-
+#               ====KIA MODELS========
     elif call.data == 'Kia':
+        bot.send_message(call.message.chat.id, "Выберите модель", reply_markup=inline14m())
+    elif call.data == 'Kia1':
         name = 'Kia Rio, 2010'
         color = 'Цвет: Черный'
         cash = '315.000 ₽'
@@ -520,7 +576,7 @@ def callback_query(call):
         sost = 'Состояние: Не требуется ремонт'
         pts = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name}\n{color}\n\n<b>{cash}\n</b>\n{year}\n{probeg}\n{have}\n{engine}\n{kuzov}\n{privod}\n{sost}\n{pts}\n\n\nhttps://auto.ru/cars/used/sale/kia/rio/1125142150-fac1aae7/', parse_mode='html')
-
+    elif call.data == 'Kia2':
         name2 = 'Kia Rio X, 2021'
         color2 = 'Цвет: Серебристый'
         cash2 = '1.599.300 ₽'
@@ -533,7 +589,7 @@ def callback_query(call):
         sost2 = 'Состояние: Не требуется ремонт'
         pts2 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name2}\n{color2}\n\n<b>{cash2}\n</b>\n{year2}\n{probeg2}\n{have2}\n{engine2}\n{kuzov2}\n{privod2}\n{sost2}\n{pts2}\n\n\nhttps://auto.ru/cars/used/sale/kia/rio/1124938134-63709c99/',parse_mode='html')
-
+    elif call.data == 'Kia3':
         name3 = 'Kia Rio, 2022'
         color3 = 'Цвет: Черный'
         cash3 = '1.900.000 ₽'
@@ -547,7 +603,11 @@ def callback_query(call):
         pts3 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name3}\n{color3}\n\n<b>{cash3}\n</b>\n{year3}\n{probeg3}\n{have3}\n{engine3}\n{kuzov3}\n{privod3}\n{sost3}\n{pts3}\n\n\nhttps://auto.ru/cars/used/sale/kia/rio/1124263362-02dea3e1/',parse_mode='html')
 
+#       =======DATSUN MODELS========
+
     elif call.data == 'Datsun':
+        bot.send_message(call.message.chat.id, "Выберите модель", reply_markup=inline16m())
+    elif call.data == 'Dat1':
         name = 'Datsun on-DO, 2020'
         color = 'Цвет: Серый'
         cash = '945.000 ₽'
@@ -560,7 +620,7 @@ def callback_query(call):
         sost = 'Состояние: Не требуется ремонт'
         pts = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name}\n{color}\n\n<b>{cash}\n</b>\n{year}\n{probeg}\n{have}\n{engine}\n{kuzov}\n{privod}\n{sost}\n{pts}\n\n\nhttps://auto.ru/cars/used/sale/datsun/on_do/1123221212-2dbc09dd/', parse_mode='html')
-
+    elif call.data == 'Dat2':
         name2 = 'Datsun mi-DO, 2015'
         color2 = 'Цвет: Голубой'
         cash2 = '600.000 ₽'
@@ -573,7 +633,7 @@ def callback_query(call):
         sost2 = 'Состояние: Не требуется ремонт'
         pts2 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name2}\n{color2}\n\n<b>{cash2}\n</b>\n{year2}\n{probeg2}\n{have2}\n{engine2}\n{kuzov2}\n{privod2}\n{sost2}\n{pts2}\n\n\nhttps://auto.ru/cars/used/sale/datsun/mi_do/1125479919-4c584967/',parse_mode='html')
-
+    elif call.data == 'Dat3':
         name3 = 'Datsun on-DO, 2014'
         color3 = 'Цвет: Черный'
         cash3 = '599.999 ₽'
@@ -586,8 +646,10 @@ def callback_query(call):
         sost3 = 'Состояние: Не требуется ремонт'
         pts3 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name3}\n{color3}\n\n<b>{cash3}\n</b>\n{year3}\n{probeg3}\n{have3}\n{engine3}\n{kuzov3}\n{privod3}\n{sost3}\n{pts3}\n\n\nhttps://auto.ru/cars/used/sale/datsun/on_do/1121412962-5b594c2e/',parse_mode='html')
-
+            # =========DACIA MODELS================
     elif call.data == 'Dacia':
+        bot.send_message(call.message.chat.id, "Выберите модель", reply_markup=inline15m())
+    elif call.data == 'Dacia1':
         name = 'Dacia Duster, 2010'
         color = 'Цвет: Белый'
         cash = '700.000 ₽'
@@ -600,7 +662,7 @@ def callback_query(call):
         sost = 'Состояние: Не требуется ремонт'
         pts = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name}\n{color}\n\n<b>{cash}\n</b>\n{year}\n{probeg}\n{have}\n{engine}\n{kuzov}\n{privod}\n{sost}\n{pts}\n\n\nhttps://auto.ru/cars/used/sale/dacia/duster/1125576306-25f6eb71/', parse_mode='html')
-
+    elif call.data == 'Dacia2':
         name2 = 'Dacia Duster, 2020'
         color2 = 'Цвет: Белый'
         cash2 = '1.400.000 ₽'
@@ -613,7 +675,7 @@ def callback_query(call):
         sost2 = 'Состояние: Не требуется ремонт'
         pts2 = 'ПТС: Оригинал'
         bot.send_message(call.message.chat.id,f'{name2}\n{color2}\n\n<b>{cash2}\n</b>\n{year2}\n{probeg2}\n{have2}\n{engine2}\n{kuzov2}\n{privod2}\n{sost2}\n{pts2}\n\n\nhttps://auto.ru/cars/used/sale/dacia/duster/1125281347-a2486779/',parse_mode='html')
-
+    elif call.data == 'Dacia3':
         name3 = 'Dacia Duster, 2018'
         color3 = 'Цвет: Черный'
         cash3 = '1.430.000 ₽'
