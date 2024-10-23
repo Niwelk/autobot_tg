@@ -199,7 +199,7 @@ def callback_query(call):
         engine2 = 'Двигатель  503 л.с / 4 л / Бензин'
         kuzov2 = 'Кузов  Седан'
         privod2 = 'Привод  Полный'
-        sost2 = 'Состояние не требуется ремонта'
+        sost2 = 'Состояние: Не требуется ремонт'
         pts2 = 'ПТС  Оригинал'
         bot.send_message(call.message.chat.id,f'{name2}\n{color2}\n\n<b>{cash2}\n</b>\n{year2}\n{probeg2}\n{have2}\n{engine2}\n{kuzov2}\n{privod2}\n{sost2}\n{pts2}\n\n\nhttps://www.avito.ru/moskva/avtomobili/mercedes-benz_maybach_s-klass_4.0_at_2024_4271695103',parse_mode='html')
 
