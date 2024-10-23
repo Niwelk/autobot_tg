@@ -19,7 +19,7 @@ def inline1m():
     marka2 = types.InlineKeyboardButton("Kia", callback_data='Kia')
     marka3 = types.InlineKeyboardButton("Dacia", callback_data='Dacia')
     marka4 = types.InlineKeyboardButton("Datsun", callback_data='Datsun')
-    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, marka4, back)
     return kbd
 
@@ -30,7 +30,7 @@ def inline2m():
     marka3 = types.InlineKeyboardButton("Audi", callback_data='Audi')
     marka4 = types.InlineKeyboardButton("Mazda", callback_data='Mazda')
     marka5 = types.InlineKeyboardButton("Lexus", callback_data='Lexus')
-    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, marka4, marka5, back)
     return kbd
 
@@ -40,7 +40,7 @@ def inline3m():
     marka2 = types.InlineKeyboardButton("Bentley", callback_data='Bentley')
     marka3 = types.InlineKeyboardButton("Bugatti", callback_data='Bugatti')
     marka4 = types.InlineKeyboardButton("Maybach", callback_data='Maybach')
-    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, marka4, back)
     return kbd
 def inline4m():
@@ -48,7 +48,7 @@ def inline4m():
     marka1 = types.InlineKeyboardButton("Bentley Bentayga, 2021", callback_data='B2021')
     marka2 = types.InlineKeyboardButton("Bentley Bentayga, 2024", callback_data='B2024')
     marka3 = types.InlineKeyboardButton("Bentley Bentayga EWB, 2023", callback_data='B2023')
-    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, back)
     return kbd
 def inline5m():
@@ -56,7 +56,7 @@ def inline5m():
     marka1 = types.InlineKeyboardButton("Bugatti Chiron, 2021 синий", callback_data='BB')
     marka2 = types.InlineKeyboardButton("Bugatti Chiron, 2021 серебристый", callback_data='BS')
     marka3 = types.InlineKeyboardButton("Bugatti Chiron, 2021 белый", callback_data='BW')
-    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, back)
     return kbd
 def inline6m():
@@ -64,7 +64,7 @@ def inline6m():
     marka1 = types.InlineKeyboardButton("Rolls-Royce Cullinan Series II Black Badge, 2024 черный", callback_data='RCB')
     marka2 = types.InlineKeyboardButton("Rolls-Royce Cullinan Series II Black Badge, 2024 белый", callback_data='RCW')
     marka3 = types.InlineKeyboardButton("Rolls-Royce Spectre, 2023", callback_data='RS')
-    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, back)
     return kbd
 def inline7m():
@@ -72,7 +72,7 @@ def inline7m():
     marka1 = types.InlineKeyboardButton("Mercedes-Benz Maybach S-класс 4.0 AT, 2022", callback_data='M22')
     marka2 = types.InlineKeyboardButton("Mercedes-Benz Maybach S-класс 4.0 AT, 2024", callback_data='M24')
     marka3 = types.InlineKeyboardButton("Mercedes-Benz Maybach S-класс 4.0 AT, 2021", callback_data='M21')
-    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, back)
     return kbd
 def inline8m():
@@ -80,7 +80,7 @@ def inline8m():
     marka1 = types.InlineKeyboardButton("Volkswagen ID.6 X, 2023", callback_data='Volks')
     marka2 = types.InlineKeyboardButton("Volkswagen Tiguan L Pro, 2024", callback_data='Volks2')
     marka3 = types.InlineKeyboardButton("Volkswagen Tayron, 2023", callback_data='Volks3')
-    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, back)
     return kbd
 def inline9m():
@@ -88,7 +88,7 @@ def inline9m():
     marka1 = types.InlineKeyboardButton("BMW Z4 20i, 2019", callback_data='BMW1')
     marka2 = types.InlineKeyboardButton("BMW X2 xDrive25i, 2024", callback_data='BMW2')
     marka3 = types.InlineKeyboardButton("BMW X3 M Competition, 2021", callback_data='BMW3')
-    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, back)
     return kbd
 def inline10m():
@@ -96,7 +96,7 @@ def inline10m():
     marka1 = types.InlineKeyboardButton("Audi e-tron 55, 2021", callback_data='Audi1')
     marka2 = types.InlineKeyboardButton("Audi A6 45 TDI, 2020", callback_data='Audi2')
     marka3 = types.InlineKeyboardButton("Audi A6 40 TDI, 2019", callback_data='Audi3')
-    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, back)
     return kbd
 def inline11m():
@@ -104,7 +104,7 @@ def inline11m():
     marka1 = types.InlineKeyboardButton("Mazda CX-5, 2024", callback_data='Mazda1')
     marka2 = types.InlineKeyboardButton("Mazda 6 Atenza, 2023", callback_data='Mazda2')
     marka3 = types.InlineKeyboardButton("Mazda 6, 2019", callback_data='Mazda3')
-    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, back)
     return kbd
 def inline12m():
@@ -112,7 +112,7 @@ def inline12m():
     marka1 = types.InlineKeyboardButton("Lexus LX 450d, 2016", callback_data='Lexus1')
     marka2 = types.InlineKeyboardButton("Lexus RX 350, 2024", callback_data='Lexus2')
     marka3 = types.InlineKeyboardButton("Lexus RX 500h, 2023", callback_data='Lexus3')
-    back = types.InlineKeyboardButton("Верунться в начало", callback_data='Верунться в начало')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, back)
     return kbd
 
@@ -691,7 +691,7 @@ def callback_query(call):
 
 
 
-    elif call.data == 'Верунться в начало':
+    elif call.data == 'Вернуться в начало':
         bot.send_message(call.message.chat.id, "Вы вернулись назад в меню выбора.", reply_markup=inline1())
 
     bot.delete_message(call.message.chat.id, call.message.message_id)  # удаление предыдущего сообщения
