@@ -17,8 +17,12 @@
 Мы сделали аватарку для бота, которая отражает цель бота. Эта аватарка позволит людям легко понять цель бота и привлечет их внимание своим современным дизайном. Мы выбрали наиболее подходящую для бота из нескольких вариантов аватарки.
 
 Некоторые варианты аватаров, которые мы сделали:
-![avatar1](https://github.com/user-attachments/assets/ab79a642-bf9d-406d-ab44-9f2fe0cacc85)
 
+(https://github.com/user-attachments/assets/ab79a642-bf9d-406d-ab44-9f2fe0cacc85)
+(https://github.com/user-attachments/assets/c34e89d6-6976-4fb1-a346-0e52dc638277)
+(https://github.com/user-attachments/assets/6423ab66-ce37-4da4-aada-c9dcdba54944)
+(https://github.com/user-attachments/assets/1d3dc3e6-7619-4fe8-bacc-b1b241a039f1)
+(https://github.com/user-attachments/assets/5bdad54f-f1f2-4c39-a8ef-d62e721a4b31)
 
 Демонстрация работы бота:
 
