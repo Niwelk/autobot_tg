@@ -115,9 +115,14 @@ def inline12m():
     back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, back)
     return kbd
-
-
-
+def inline13m():
+    kbd = types.InlineKeyboardMarkup(row_width=1)
+    marka1 = types.InlineKeyboardButton("Lada (ВАЗ) Vesta SW Cross, 2024", callback_data='Lada1')
+    marka2 = types.InlineKeyboardButton("Lada (ВАЗ) Granta, 2024", callback_data='Lada2')
+    marka3 = types.InlineKeyboardButton("Lada (ВАЗ) Niva, 2024", callback_data='Lada3')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
+    kbd.add(marka1, marka2, marka3, back)
+    return kbd
 @bot.callback_query_handler(func=lambda call: True)
 def callback_query(call):
     if call.data == 'Бюджет':
