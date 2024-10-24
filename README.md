@@ -18,11 +18,12 @@
 
 Некоторые варианты аватаров, которые мы сделали:
 
-(https://github.com/user-attachments/assets/ab79a642-bf9d-406d-ab44-9f2fe0cacc85)
-(https://github.com/user-attachments/assets/c34e89d6-6976-4fb1-a346-0e52dc638277)
-(https://github.com/user-attachments/assets/6423ab66-ce37-4da4-aada-c9dcdba54944)
-(https://github.com/user-attachments/assets/1d3dc3e6-7619-4fe8-bacc-b1b241a039f1)
-(https://github.com/user-attachments/assets/5bdad54f-f1f2-4c39-a8ef-d62e721a4b31)
+![a1](https://github.com/user-attachments/assets/6475f788-12ed-4ddf-8f2e-606da290e5c4)
+![a2](https://github.com/user-attachments/assets/b00fde60-00de-43ac-b3b8-a50a5be3bb53)
+![a3](https://github.com/user-attachments/assets/cf332dc0-a2b5-42dd-a44f-8eca3396fc58)
+![a4](https://github.com/user-attachments/assets/7b4b6148-0dd2-4e25-a068-cf0fa8535239)
+![a5](https://github.com/user-attachments/assets/ad7158de-e81f-4917-8fbc-633c7954d459)
+
 
 Демонстрация работы бота:
 
