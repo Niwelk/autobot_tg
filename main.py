@@ -123,6 +123,30 @@ def inline13m():
     back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
     kbd.add(marka1, marka2, marka3, back)
     return kbd
+def inline14m():
+    kbd = types.InlineKeyboardMarkup(row_width=1)
+    marka1 = types.InlineKeyboardButton("Kia Rio, 2010", callback_data='Kia1')
+    marka2 = types.InlineKeyboardButton("Kia Rio X, 2021", callback_data='Kia2')
+    marka3 = types.InlineKeyboardButton("Kia Rio, 2022", callback_data='Kia3')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
+    kbd.add(marka1, marka2, marka3, back)
+    return kbd
+def inline15m():
+    kbd = types.InlineKeyboardMarkup(row_width=1)
+    marka1 = types.InlineKeyboardButton("Dacia Duster, 2010", callback_data='Dacia2')
+    marka2 = types.InlineKeyboardButton("Dacia Duster, 2020", callback_data='Dacia2')
+    marka3 = types.InlineKeyboardButton("Dacia Duster, 2018", callback_data='Dacia3')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
+    kbd.add(marka1, marka2, marka3, back)
+    return kbd
+def inline16m():
+    kbd = types.InlineKeyboardMarkup(row_width=1)
+    marka1 = types.InlineKeyboardButton("Datsun on-DO, 2020", callback_data='Dat1')
+    marka2 = types.InlineKeyboardButton("Datsun mi-DO, 2015", callback_data='Dat2')
+    marka3 = types.InlineKeyboardButton("Datsun on-DO, 2014", callback_data='Dat3')
+    back = types.InlineKeyboardButton("Вернуться в начало", callback_data='Вернуться в начало')
+    kbd.add(marka1, marka2, marka3, back)
+    return kbd
 @bot.callback_query_handler(func=lambda call: True)
 def callback_query(call):
     if call.data == 'Бюджет':
