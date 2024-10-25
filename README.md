@@ -108,34 +108,32 @@ https://auto.ru/cars/used/sale/audi/a6/1124929459-bddf7818/
 
 Rolls-Royce:
 
+https://auto.ru/cars/used/sale/rolls_royce/cullinan/1125451579-4d2cc40a/
+
+https://auto.ru/cars/new/group/rolls_royce/spectre/23403556/23804614/1124296284-edff7aed/
+
 https://auto.ru/cars/used/sale/rolls_royce/cullinan/1125451931-e193f62b/
 
-https://auto.ru/cars/new/sale/rolls_royce/ghost/1123207317-1e1ee7b8/
+Bently:
 
-https://auto.ru/cars/used/sale/rolls_royce/phantom/1124918096-691faa95/
+https://auto.ru/cars/used/sale/bentley/bentayga/1124675566-61e69c1f/
 
-Lamborghini:
+https://auto.ru/cars/used/sale/bentley/bentayga/1124564356-8ae5920c/
 
-https://auto.ru/cars/used/sale/lamborghini/huracan/1123411674-2219ba7b/
-
-https://auto.ru/cars/new/sale/lamborghini/urus/1120052491-d9b08a66/
-
-Bentley: 
-
-https://auto.ru/cars/new/sale/bentley/bentayga/1124566930-30e6b648/
-
-https://auto.ru/cars/new/sale/bentley/continental_gt/1124750335-4810b815/
-
-https://auto.ru/cars/used/sale/bentley/arnage/1125577433-5341c739/
-
-Maserati:
-
-https://auto.ru/cars/used/sale/maserati/mc20/1125601250-596870eb/
-
-https://auto.ru/cars/used/sale/maserati/grecale/1125103350-438de139/
+https://auto.ru/cars/new/group/bentley/bentayga/23271554/22544511/1119893898-64c45a7f/
 
 Bugatti:
 
 https://auto.ru/cars/used/sale/bugatti/chiron/1124292308-a01c32ca/
 
 https://auto.ru/cars/new/sale/bugatti/chiron/1125055271-517065a1/
+
+https://auto.ru/cars/used/sale/bugatti/chiron/1124215250-eb71b0d8/
+
+Maybach:
+
+https://www.avito.ru/moskva/avtomobili/mercedes-benz_maybach_s-klass_4.0_at_2022_4_900_km_4801548844
+
+https://www.avito.ru/moskva/avtomobili/mercedes-benz_maybach_s-klass_4.0_at_2024_4271695103
+
+https://www.avito.ru/moskva/avtomobili/mercedes-benz_maybach_s-klass_4.0_at_2021_63_500_km_4556343769
