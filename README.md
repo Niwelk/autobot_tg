@@ -86,6 +86,8 @@ https://auto.ru/cars/new/sale/volkswagen/tiguan/1125378713-335070db/
 
 https://auto.ru/cars/new/sale/volkswagen/tayron/1123060914-d9bbcbdf/
 
+https://auto.ru/cars/new/group/volkswagen/id6/23178742/23661178/1123238228-550cb29d/
+
 BMW:
 
 https://auto.ru/cars/used/sale/bmw/x2/1125228996-c5bf0da5/
@@ -105,6 +107,14 @@ https://auto.ru/cars/used/sale/audi/a6/1124929459-bddf7818/
 
 
 Люксовые:
+
+Lexus:
+
+https://auto.ru/cars/used/sale/lexus/lx/1124531784-17348801/
+
+https://auto.ru/cars/used/sale/lexus/rx/1125413651-c6128d71/
+
+https://auto.ru/cars/used/sale/lexus/rx/1124171035-ad6a48a7/
 
 Rolls-Royce:
 
